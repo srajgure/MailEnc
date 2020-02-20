@@ -1,5 +1,5 @@
 {
-  "name": "MainEnc",
+  "name": "MailEnc",
   "description": "Chrome Extension for Mail Encryption in Gmail using InboxSDK and OpenPGP.js",
   "version": "0.1",
   "content_scripts": [
