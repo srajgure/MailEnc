@@ -16,5 +16,14 @@
     "https://mail.google.com/",
     "https://inbox.google.com/"
   ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "img/lock.png",
+      "32": "img/lock.png",
+      "48": "img/lock.png",
+      "128": "img/lock.png"
+    }
+  },
   "manifest_version": 2
 }
