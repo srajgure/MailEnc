@@ -1,6 +1,6 @@
 {
-  "name": "Example Gmail Extension",
-  "description": "Example extension showing use of the Streak Gmail SDK",
+  "name": "MainEnc",
+  "description": "Chrome Extension for Mail Encryption in Gmail using InboxSDK and OpenPGP.js",
   "version": "0.1",
   "content_scripts": [
     {
@@ -8,7 +8,7 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["inboxsdk.js","content.js"],
+      "js": ["inboxsdk.js","action.js"],
       "run_at": "document_end"
     }
   ],
