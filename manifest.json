@@ -8,7 +8,7 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["inboxsdk.js","action.js"],
+      "js": ["inboxsdk.js","action.js","openpgp.js","encryption.js"],
       "run_at": "document_end"
     }
   ],
