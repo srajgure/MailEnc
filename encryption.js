@@ -1,7 +1,8 @@
+
 function encrypt(message)
  {
 				
-				
+				//window.alert(message);
                 var encrypted="";
 				var pubkey=`-----BEGIN PGP PUBLIC KEY BLOCK-----
 				Version: OpenPGP.js v2.5.4
@@ -39,10 +40,12 @@ function encrypt(message)
 				
 
 				const encryptMessage = async () => {
-					window.alert("In function");
+					console.log(openpgp);
 					if (message != "") {
+						//window.alert("not null");
 						const publicKeyString = pubkey;
 
+						
 						var options = {
 							message: openpgp.message.fromText(message),
 							publicKeys: (await openpgp.key.readArmored(publicKeyString)).keys
@@ -50,8 +53,9 @@ function encrypt(message)
 
 
 						openpgp.encrypt(options).then(ciphertext => {
+
 							encrypted=ciphertext.data;
-							//console.log(ciphertext.data);
+
 
 						})
 
@@ -71,3 +75,17 @@ function encrypt(message)
                 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
