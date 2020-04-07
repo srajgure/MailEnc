@@ -12,7 +12,6 @@ function encrypt(text)
 
 	// To print or store the binary data, you may convert it to hex
 	var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
-	console.log(encryptedHex);
 		
 	return encryptedHex;
 }
@@ -34,21 +33,5 @@ function decrypt(cipher)
 	// Convert our bytes back into text
 	var decryptedText = aesjs.utils.utf8.fromBytes(decryptedBytes);
 	
-	console.log(decryptedBytes);
-	
-	return decryptedBytes;
+	return decryptedText;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
