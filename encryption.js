@@ -1,6 +1,6 @@
 
 function encrypt(message)
- {
+ 
 				
 				//window.alert(message);
                 var encrypted="";
@@ -42,12 +42,13 @@ function encrypt(message)
 				const encryptMessage = async () => {
 					console.log(openpgp);
 					if (message != "") {
-						//window.alert("not null");
+						window.alert("not null");
 						const publicKeyString = pubkey;
 
 						
 						var options = {
 							message: openpgp.message.fromText(message),
+							//publicKeys:pubkey
 							publicKeys: (await openpgp.key.readArmored(publicKeyString)).keys
 						};
 
@@ -71,8 +72,6 @@ function encrypt(message)
                 encryptMessage();
 
 	return encrypted;
-				
-                
 
 }
 
