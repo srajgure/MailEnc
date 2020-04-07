@@ -10,7 +10,7 @@ InboxSDK.load('1', 'sdk_Akshay_0b1daa8634').then(function(sdk){
 				//Get Message from compose box.
 				var temp=event.composeView.getHTMLContent();
 				
-				var enc = "Encrypted with AES :\n\n";
+				var enc = "Encrypted with AES : ";
 				enc = enc.concat(encrypt(temp));
 							
 				event.composeView.setBodyText(enc);
@@ -26,11 +26,21 @@ InboxSDK.load('1', 'sdk_Akshay_0b1daa8634').then(function(sdk){
 			title: "Decrypt",
 			iconUrl: 'https://image.flaticon.com/icons/svg/2471/2471529.svg',
 			onClick: function(event) {
-				//Get Message from compose box.
-				var test = messageView.getBodyElement();
-				
-				window.alert(test);
-			},
-		});
+					//Get Message from compose box.
+					var cipher = messageView.getBodyElement().textContent;
+					
+					cipher = cipher.substring(22, cipher.length-1);
+					
+					var plaintxt = decrypt(cipher);
+
+					//open a new html page containing decrypted text
+					var opened = window.open("");
+					var htmlstring = "<html><head><title>Decrypted text : </title></head><body>";
+					htmlstring = htmlstring.concat(plaintxt);
+					htmlstring = htmlstring.concat("</body></html>")
+					opened.document.write(htmlstring);
+					
+					},
+				});
 	});
 });
