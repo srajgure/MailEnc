@@ -29,7 +29,7 @@ InboxSDK.load('1', 'sdk_Akshay_0b1daa8634').then(function(sdk){
 					//Get Message from compose box.
 					var cipher = messageView.getBodyElement().textContent;
 					
-					cipher = cipher.substring(22, cipher.length-1);
+					cipher = cipher.substring(21, cipher.length-1);
 					
 					var plaintxt = decrypt(cipher);
 
