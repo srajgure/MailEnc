@@ -8,7 +8,7 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["inboxsdk.js","action.js","openpgp.js","encdec.js","aes.js","chrome-extension-async.js"],
+      "js": ["inboxsdk.js","action.js","openpgp.js","encdec.js","aes.js","jsbn.js","jsbn2.js","prng4.js","rng4.js","rsa.js","rsa2.js","chrome-extension-async.js"],
       "run_at": "document_end"
     }
   ],
