@@ -1,8 +1,8 @@
-function encrypt(text)
+function encrypt(text, key)
  {
 	//key is 128bits(8bit X 16)
 	//hard-coded key.later user will generate key
-	var key = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];
+	//var key = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];
 	
 	var textBytes = aesjs.utils.utf8.toBytes(text);
 
@@ -16,11 +16,11 @@ function encrypt(text)
 	return encryptedHex;
 }
 
-function decrypt(cipher)
+function decrypt(cipher, key)
 {
 	//key is 128bits(8bit X 16)
 	//hard-coded key later user will generate key
-	var key = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];
+	//var key = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ];
 	
 	// When ready to decrypt the hex string, convert it back to bytes
 	var encryptedBytes = aesjs.utils.hex.toBytes(cipher);
