@@ -1,4 +1,4 @@
-InboxSDK.load('1', 'sdk_Akshay_0b1daa8634').then(function(sdk){
+InboxSDK.load('1', 'sdk_app_check_ebe9d01b93').then(function(sdk){
 
 	
 	sdk.Compose.registerComposeViewHandler(function(composeView){
