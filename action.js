@@ -4,7 +4,7 @@ InboxSDK.load('1', 'sdk_app_check_ebe9d01b93').then(function(sdk){
 	sdk.Compose.registerComposeViewHandler(function(composeView){
 		
 		composeView.addButton({
-			title: "AES-ENC",
+			title: "MailEnc AES",
 			iconUrl: 'https://img.icons8.com/cotton/64/000000/lock.png',
 			onClick: function(event) {
 				//Get Message from compose box.
@@ -27,8 +27,8 @@ InboxSDK.load('1', 'sdk_app_check_ebe9d01b93').then(function(sdk){
 		});
 
 		composeView.addButton({
-		    title: "RSA-ENC",
-            iconUrl: 'https://icons.iconseeker.com/png/fullsize/scrap/lock-6.png',
+		    title: "KeyEnc RSA",
+            iconUrl: 'https://img.icons8.com/cotton/64/000000/key--v3.png',
             onClick: function(event) {
                 //Get Message from compose box.
                 var temp = event.composeView.getHTMLContent();
@@ -48,8 +48,8 @@ InboxSDK.load('1', 'sdk_app_check_ebe9d01b93').then(function(sdk){
 		
 		messageView.addToolbarButton({
 			section: sdk.Conversations.MessageViewToolbarSectionNames.MORE,
-			title: "Decrypt AES",
-			iconUrl: 'https://image.flaticon.com/icons/svg/2471/2471529.svg',
+			title: "Mail Decrypt AES",
+			iconUrl: 'https://img.icons8.com/cotton/64/000000/lock.png',
 			onClick: function(event) {
 					//Get Message from compose box.
 					var cipher = messageView.getBodyElement().textContent;
@@ -79,8 +79,8 @@ InboxSDK.load('1', 'sdk_app_check_ebe9d01b93').then(function(sdk){
 
 		messageView.addToolbarButton({
 		    section: sdk.Conversations.MessageViewToolbarSectionNames.MORE,
-            title: "Decrypt RSA",
-            iconUrl: 'https://icons.iconseeker.com/png/fullsize/scrap/lock-6.png',
+            title: "Key Decrypt RSA",
+            iconUrl: 'https://img.icons8.com/cotton/64/000000/key--v3.png',
             onClick: function(event) {
                     //Get Message from compose box.
                     var cipher = messageView.getBodyElement().textContent;
